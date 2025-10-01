@@ -55,43 +55,78 @@ Auth System: Django auth
 
 
 myproject/
+
 │── manage.py
+
 │── myproject/
+
 │    ├── settings.py
+
 │    ├── urls.py
+
 │    └── ...
+
 │── posts/
+
 │    ├── models.py
+
 │    ├── views.py
+
 │    ├── urls.py
+
 │    ├── forms.py
+
 │    └── templates/posts/
+
 │── users/
+
 │    ├── views.py
+
 │    ├── urls.py
+
 │    └── templates/users/
+
 │── templates/
+
 │    └── layout.html
+
 │── static/
+
 │    ├── css/style.css
+
 │    ├── js/main.js
+
 │    └── img/GradVoyage.png
+
 │── media/ (uploaded images)
 
 
-📦 Key Commands Used
+📦 Key Commands Used:
+
 Command	Purpose
+
 python -m venv .venv	Create virtual environment
+
 .venv\Scripts\activate / source .venv/bin/activate	Activate venv
+
 pip install Django Pillow	Install dependencies
+
 django-admin startproject myproject .	Create new Django project
+
 python manage.py startapp posts	Create new app
+
 python manage.py makemigrations	Generate DB migrations
+
 python manage.py migrate	Apply migrations
+
 python manage.py runserver	Start dev server
+
 python manage.py shell	Interactive Python shell
+
 python manage.py createsuperuser	Create admin user
+
 python manage.py collectstatic	Collect static files for production
+
 
 
 🛡 Troubleshooting
@@ -103,9 +138,13 @@ NoReverseMatch → Ensure {% url 'app:view' %} matches urls.py names exactly.
 Slug errors (empty slug) → Check via python manage.py shell and update:
 
 from posts.models import Post
+
 from django.utils.text import slugify
+
 p = Post.objects.get(id=1)
+
 p.slug = slugify(p.title)
+
 p.save()
 
 
@@ -131,6 +170,10 @@ Using Django Admin for content management.
 
 Styling and branding with CSS, logos, and favicon.
 
+Media Handling: Django ImageField, Pillow
+
+Other Tools: Virtual environment (venv), collectstatic, CSRF protection
+
 
 
 📜 License
@@ -140,19 +183,4 @@ This project is for learning purposes. Feel free to fork and extend.
 🔥 Proudly built while learning Django → GradVoyage 🎓✈️
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Media Handling: Django ImageField, Pillow
-
-Other Tools: Virtual environment (venv), collectstatic, CSRF protection
 
