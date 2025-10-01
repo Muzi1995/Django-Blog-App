@@ -79,7 +79,6 @@ myproject/
 │── media/ (uploaded images)
 
 
-
 📦 Key Commands Used
 Command	Purpose
 python -m venv .venv	Create virtual environment
@@ -156,3 +155,4 @@ This project is for learning purposes. Feel free to fork and extend.
 Media Handling: Django ImageField, Pillow
 
 Other Tools: Virtual environment (venv), collectstatic, CSRF protection
+
